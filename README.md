@@ -12,20 +12,28 @@ Crear servidor con PHP, solo para pruebas
 sudo php -S localhost:80
 ```
 
-### Authentication
+### 01 Authentication
 Authentication, direccionar a esta URL para autenticar usuario, y permitir
 hacer consulta de datos.
 ``` bash
 GET https://accounts.google.com/o/oauth2/auth?client_id=778810842547-qqvoic08gga7plchr8ska7tsr5urj0d3.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost&scope=https://www.googleapis.com/auth/youtube&response_type=token
 ```
 
-### Get data from current Channel
+### 02 Get data from current Channel
 ``` bash
 # Variable
 part				snippet,contentDetails,brandingSettings,invideoPromotion
 mine				true
 key					''
-access_token		'' _dinamico_
+access_token		'' #_dinamico_
 # Example
 GET https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails,brandingSettings,invideoPromotion&mine=true&key=AIzaSyAYsa0ljjyuQwSX1LQDwQ1WRlXiBVCwOKI&access_token=ya29.lgJVK0xoA7Lq_n3mfgGIf4DevEROHXcch_nV1tNtN8cVRIyZqpoxOjH-naUjDuPOuA
+```
+
+### 03 Verificar permisos *Auth*
+``` bash
+# Variable
+access_token		''
+# Example
+GET https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=ya29.lgLgeBAq5JBflrEwv4S-9m34nVO-aQ11ZKAMW1O0C0_WS5XHu5657Zm5KGx-68mo09k
 ```
