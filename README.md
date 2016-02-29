@@ -20,6 +20,7 @@ GET https://accounts.google.com/o/oauth2/auth?client_id=778810842547-qqvoic08gga
 ```
 
 ### 02 Get data from current Channel
+[fuente](https://developers.google.com/youtube/v3/guides/auth/client-side-web-apps)
 ``` bash
 # Variable
 part				snippet,contentDetails,brandingSettings,invideoPromotion
