@@ -13,6 +13,7 @@ sudo php -S localhost:80
 ```
 
 ### 01 Authentication
+fuente [authentication google](https://developers.google.com/identity/sign-in/web/reference#googleusergetauthresponse)
 Authentication, direccionar a esta URL para autenticar usuario, y permitir
 hacer consulta de datos.
 ``` bash
