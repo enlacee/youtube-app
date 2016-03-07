@@ -39,3 +39,6 @@ access_token		''
 # Example
 GET https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=ya29.lgLgeBAq5JBflrEwv4S-9m34nVO-aQ11ZKAMW1O0C0_WS5XHu5657Zm5KGx-68mo09k
 ```
+
+### 04 Integrating Google Sign-In into your web app
+source [link](https://developers.google.com/identity/sign-in/web/sign-in#before_you_begin)
