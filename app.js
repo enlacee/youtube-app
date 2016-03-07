@@ -23,6 +23,9 @@ AS.testOne = function() {
 
 };
 
+/*
+* get api youtube
+*/
 AS.getDatosBasicosYoutube = function(access_token){
 	var me = this;
 	var url = "https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails,brandingSettings,invideoPromotion&mine=true&key=" + me.getApiKey();
@@ -30,9 +33,19 @@ AS.getDatosBasicosYoutube = function(access_token){
 	me.model.load(url)
 		.then(function() {
 			console.log(me.model);
+			console.log("id favorito");
+			console.log("Name", me.model.items[0].snippet.title);
+			console.log("URL avatar", me.model.items[0].snippet.thumbnails.high.url);
+			console.log("ID favoritas", me.model.items[0].contentDetails.relatedPlaylists.favorites);
 		});
 };
 
 
 var app = new AppScrap();
-app.testOne();
+//app.testOne();
+
+if (Util.getParameterByName('access_token')) {
+	console.log("API youtube");
+	var access_token = Util.getParameterByName('access_token');
+	app.getDatosBasicosYoutube(access_token);
+}

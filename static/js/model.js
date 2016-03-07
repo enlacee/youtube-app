@@ -2,7 +2,7 @@
 (function () {
 	function AjaxModel(url) {
 		this.url = url;
-	};
+	}
 
 	var model = AjaxModel.prototype;
 
