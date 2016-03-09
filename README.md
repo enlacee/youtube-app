@@ -42,3 +42,23 @@ GET https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=ya29.lgLgeBAq5JB
 
 ### 04 Integrating Google Sign-In into your web app
 source [link](https://developers.google.com/identity/sign-in/web/sign-in#before_you_begin)
+
+### 05 Favorites List
+``` bash
+# Variable
+part			part
+playlistId		'FLvPN2SvwQ6Vqfd1HMHYcceA' # example
+
+GET https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=FLvPN2SvwQ6Vqfd1HMHYcceA&key={YOUR_API_KEY}
+```
+
+### Get data video
+Los videos se clasifican por ditintas categorias la categoria de musica es el numero `10`
+
+``` bash
+GET
+part			snippet,contentDetails,statistics,status
+key				'' # key de tu applicacion youtube
+id				'oXGm9Vlfx4w' # id del video de youtube
+https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics,status&key=AIzaSyAYsa0ljjyuQwSX1LQDwQ1WRlXiBVCwOKI&id=oXGm9Vlfx4w
+```

@@ -24,7 +24,7 @@ AS.testOne = function() {
 };
 
 /*
-* get api youtube
+* get api youtube Datos basicos
 */
 AS.getDatosBasicosYoutube = function(access_token){
 	var me = this;
@@ -37,7 +37,21 @@ AS.getDatosBasicosYoutube = function(access_token){
 			console.log("Name", me.model.items[0].snippet.title);
 			console.log("URL avatar", me.model.items[0].snippet.thumbnails.high.url);
 			console.log("ID favoritas", me.model.items[0].contentDetails.relatedPlaylists.favorites);
+			var idFavorite = me.model.items[0].contentDetails.relatedPlaylists.favorites;
+			me.getFavoritesList(idFavorite)
 		});
+};
+
+AS.getFavoritesList = function(channelId) {
+	var me = this;
+	var url ="https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=" + channelId + "&key=" + me.getApiKey();
+	var data = new AjaxModel();
+	data.load(url)
+		.then(function() {
+			console.log('data', data);
+		});
+
+
 };
 
 
