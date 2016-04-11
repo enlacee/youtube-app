@@ -38,7 +38,9 @@ AS.getDatosBasicosYoutube = function(access_token){
 			console.log("URL avatar", me.model.items[0].snippet.thumbnails.high.url);
 			console.log("ID favoritas", me.model.items[0].contentDetails.relatedPlaylists.favorites);
 			var idFavorite = me.model.items[0].contentDetails.relatedPlaylists.favorites;
-			me.getFavoritesList(idFavorite)
+
+			me.getFavoritesList(idFavorite);
+
 		});
 };
 
@@ -50,8 +52,6 @@ AS.getFavoritesList = function(channelId) {
 		.then(function() {
 			console.log('data', data);
 		});
-
-
 };
 
 
