@@ -1,19 +1,17 @@
 # APP
 
-App for share music and videos
-
-### npm without sudo
+> App for share music and videos
 
 [How to use npm without sudo](https://goo.gl/3rf2Kl)
 
-### Desarrollo
+### Development
 
 Chek if we have installed the next dependencies
 
 	node 4.3.x
 
 
-#### 01: Crear proyecto `NPM` y `GULP`
+#### 01: Install `NPM` y `GULP`
 
 	npm init
 
