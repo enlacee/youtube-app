@@ -1,2 +1,8 @@
 # no follow
+# Enviroment python
 ENV/
+#others
+node_modules
+
+
+app/bower_components
