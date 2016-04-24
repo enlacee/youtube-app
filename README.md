@@ -62,3 +62,14 @@ key				'' # key de tu applicacion youtube
 id				'oXGm9Vlfx4w' # id del video de youtube
 https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics,status&key=AIzaSyAYsa0ljjyuQwSX1LQDwQ1WRlXiBVCwOKI&id=oXGm9Vlfx4w
 ```
+
+### test YOUTUBE-DL
+
+``` shell
+# con formato
+youtube-dl -o '%(title)s-%(id)s.%(ext)s' "https://www.youtube.com/watch?v=RfkcI8dhfsQ"
+# obtener la URL del sonido del video
+youtube-dl -f 249 -g https://www.youtube.com/watch?v=Ahha3Cqe_fk
+# obtener la URL del video
+youtube-dl -f 249 -e https://www.youtube.com/watch?v=Ahha3Cqe_fk
+```
