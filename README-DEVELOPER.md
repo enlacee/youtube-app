@@ -25,9 +25,9 @@ Instalar gulp en el servidor CLI
 
 	npm install --save-dev gulp
 
-Istalar gulp para el desarrollo de la app
+Install gulp for this project
 
-#### 02: Intalar `BOWER`
+#### 02: Install `BOWER`
 
 	npm install -g bower
 	touch .bowerrc
@@ -41,3 +41,26 @@ And fill with this
 
 You have to create the file `.bowerrc` this indicates where installed libraries  
 JavaScripr OR Css.
+
+#### 03: Install Virtual Environment `python`
+
+This project use `Flask` as server web
+
+Create Environment
+
+	pyvenv ENV
+
+Enabled Environment
+
+	cd ENV
+	souce bin/activate
+
+Create list of packages install there!  
+`requirements.txt` store this dependencies
+
+	pip freeze > requirements.txt
+
+Install all dependencies libraries python  
+Easy Install
+
+	pip install -r requirements.txt
