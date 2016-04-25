@@ -68,10 +68,10 @@ https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statist
 ``` shell
 # El formato como se creara el archivo
 youtube-dl -o '%(title)s-%(id)s.%(ext)s' "https://www.youtube.com/watch?v=RfkcI8dhfsQ"
-# obtener la URL del sonido del video
-youtube-dl -f 249 -g https://www.youtube.com/watch?v=Ahha3Cqe_fk
+# obtener la URL del sonido
+youtube-dl -f 249 -g https://www.youtube.com/watch?v=FjNdYp2gXRY
 # obtener la URL del video
-youtube-dl -f 249 -e https://www.youtube.com/watch?v=Ahha3Cqe_fk
+youtube-dl -f webm -g https://www.youtube.com/watch?v=FjNdYp2gXRY
 # Obtener muchos datos basicos en json
 youtube-dl --dump-single-json "https://www.youtube.com/watch?v=Ahha3Cqe_fk"
 # Descargar thumbnail del video

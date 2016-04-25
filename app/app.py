@@ -6,7 +6,8 @@ app = Flask(__name__)
 def main():
 	app.logger.debug('A value for debugging')
 	error = 'erororo echo'
-	return render_template('index.html', error=error)
+	title = "Python request"
+	return render_template('index.html',**locals())
 
 
 if __name__ == "__main__":
