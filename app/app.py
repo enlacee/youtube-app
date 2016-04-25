@@ -1,19 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask, request, session, g, redirect, url_for, abort, \
+	render_template, flash
 app = Flask(__name__)
 
 @app.route("/")
 def main():
 	app.logger.debug('A value for debugging')
-	return render_template('index.html')
+	error = 'erororo echo'
+	return render_template('index.html', error=error)
 
-@app.route("/hola")
-def hola():
-	return "hola pepe lucho <h1>hi!</h1>"
-
-@app.route('/compartir/<username>')
-def show_user_profile(username):
-    # show the user profile for that user
-    return 'User %s' % username
 
 if __name__ == "__main__":
 	app.debug = True

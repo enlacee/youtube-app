@@ -22,6 +22,7 @@ Chek if we have installed the next dependencies
 Instalar gulp en el servidor CLI
 
 	npm install --save-dev gulp
+	npm install --save-dev gulp-sass
 
 Install gulp for this project
 
@@ -42,7 +43,7 @@ JavaScripr OR Css.
 
 #### 03: Install Virtual Environment `python`
 
-This project use `Flask` as server web
+This project use `Flask` as web server
 
 Create Environment
 

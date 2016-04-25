@@ -1,0 +1,23 @@
+{
+  "name": "yapp",
+  "description": "Consumir datos de Google `Google+, Youtube`",
+  "main": "index.js",
+  "authors": [
+    "Anibal Copitan"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/enlacee/youtube-app",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6",
+    "jquery": "~2.2.3"
+  }
+}

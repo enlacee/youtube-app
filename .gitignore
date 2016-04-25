@@ -3,6 +3,6 @@
 ENV/
 #others
 node_modules
-
-
 app/bower_components
+# project app
+app/static/css/
