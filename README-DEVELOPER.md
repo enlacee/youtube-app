@@ -64,3 +64,22 @@ Install all dependencies libraries python
 Easy Install
 
 	pip install -r requirements.txt
+
+##### 04: virtualhost `wsgi`
+
+Create file `/etc/apache2/sites-available/local.appyoutube.com.conf`
+
+	<virtualhost *:80>
+	    ServerName local.appyoutube.com
+
+	    WSGIDaemonProcess index user=www-data group=www-data threads=5 home=/var/www/html/acopitan/yo/app-youtube/app/
+	    WSGIScriptAlias / /var/www/html/acopitan/yo/app-youtube/app/start.wsgi
+
+	    <directory /var/www/html/acopitan/yo/app-youtube/app>
+	        WSGIProcessGroup index
+	        WSGIApplicationGroup %{GLOBAL}
+	        WSGIScriptReloading On
+	        Order deny,allow
+	        Allow from all
+	    </directory>
+	</virtualhost>
