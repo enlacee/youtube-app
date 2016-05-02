@@ -23,6 +23,7 @@ Instalar gulp en el servidor CLI
 
 	npm install --save-dev gulp
 	npm install --save-dev gulp-sass
+	npm install --save-dev bower
 
 Install gulp for this project
 
@@ -47,7 +48,7 @@ This project use `Flask` as web server
 
 Create Environment
 
-	pyvenv ENV
+	virtualenv ENV
 
 Enabled Environment
 
