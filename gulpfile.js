@@ -13,9 +13,17 @@ var config = {
 };
 
 gulp.task('css', function() {
-    return gulp.src('./app/css/app.scss')
+    return gulp.src('./app/deploy/app.scss')
     .pipe(sass({
-        includePaths: [config.bootstrapDir + '/assets/stylesheets'],
+        includePaths: [
+            config.bootstrapDir + '/assets/stylesheets',
+            './app/deploy/static/css'
+        ],
     }))
     .pipe(gulp.dest(config.publicDir + '/css'));
 });
+
+/*
+* task default
+**/
+gulp.task('default', ['css']);

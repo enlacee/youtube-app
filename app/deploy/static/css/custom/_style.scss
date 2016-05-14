@@ -1,0 +1,25 @@
+#left-panel {
+	width: 250px;
+	min-height: 15%;
+	background-color: #ccc;
+	position: absolute;;
+	top: 5%;
+}
+
+.text-muted{
+	padding: 0;
+	margin: 0;
+}
+
+.btn-login-google{
+	background-color: #dd4b38;
+	color:white;
+}
+
+.nav li a.btn-login-google:hover{
+	background-color: darken(#dd4b38, 5%);
+	color: white;
+}
+.nav-pills > li > a{
+	border-radius: initial;
+}

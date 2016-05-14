@@ -79,3 +79,9 @@ youtube-dl --dump-single-json "https://www.youtube.com/watch?v=Ahha3Cqe_fk"
 # Descargar MP3
 youtube-dl --extract-audio --audio-format mp3 https://www.youtube.com/watch?v=5D4kSVcELjM
 ```
+
+### test: hacer busqueda en pyhon youtubeAPI
+
+[api youtube with python](https://developers.google.com/youtube/v3/guides/searching_by_topic?hl=es#Sample_Code)  
+
+https://developers.google.com/youtube/v3/code_samples/#php
