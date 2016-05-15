@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="static/css/app.css" media="screen" title="no title" charset="utf-8">
-		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8"> -->
 		<title>Python Flask Bucket List App</title>
 	</head>
 	<body>
@@ -12,12 +11,16 @@
 				<nav>
 					<ul class="nav nav-pills pull-right">
 						<li role="">
-							<a href="#" class="btn btn-login-google" >Entrar con Gmail</a>
+							<a href="https://accounts.google.com/o/oauth2/auth?redirect_uri=http://localhost:5000&response_type=code&client_id=778810842547-qqvoic08gga7plchr8ska7tsr5urj0d3.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/youtube&approval_prompt=force&access_type=offline"
+							class="btn btn-login-google" >Entrar con Gmail1</a>
+						</li>
+						<li>
+							<a href="https://accounts.google.com/o/oauth2/auth?client_id=778810842547-qqvoic08gga7plchr8ska7tsr5urj0d3.apps.googleusercontent.com&redirect_uri=http://localhost:5000&scope=https://www.googleapis.com/auth/youtube&response_type=token"
+							class="btn btn-login-google" >Entrar con Gmail2</a>
 						</li>
 					</ul>
 				</nav>
 				<h1 class="text-muted"><a href="#" class="box-shadow-menu"></a></h1>
-
 			</div>
 
 			<div class="jumbotron_" style="border:1px solid red">
@@ -28,15 +31,6 @@
 					<pre>https://www.youtube.com/watch?v=FjNdYp2gXRY</pre>
 				</p>
 			</div>
-
-			<h2>audio</h2>
-			<audio preload="none" controls src="https://r7---sn-uqx2-aphl.googlevideo.com/videoplayback?id=16335d629da05d16&itag=249&source=youtube&requiressl=yes&mm=31&mn=sn-uqx2-aphl&mv=m&ms=au&pl=24&initcwndbps=521250&pcm2cms=yes&ratebypass=yes&mime=audio/webm&gir=yes&clen=1850809&lmt=1449556694260079&dur=282.061&fexp=9416126,9416778,9416891,9422596,9423036,9424490,9426926,9428232,9428398,9428707,9429381,9429806,9431012,9431521,9432684,9432834,9433097,9433947,9434789&key=dg_yt0&signature=73BB73FFF905316AAF703A21C1727E52BE4C6210.5F60C279CB022DA5796FB737924F49C8297E02B0&mt=1461549869&sver=3&upn=yU_3hCXhQe4&ip=190.234.106.94&ipbits=0&expire=1461571545&sparams=ip,ipbits,expire,id,itag,source,requiressl,mm,mn,mv,ms,pl,initcwndbps,pcm2cms,ratebypass,mime,gir,clen,lmt,dur">
-			</audio>
-
-			<h2>video</h2>
-			<video preload="metadata"src="https://r7---sn-uqx2-aphl.googlevideo.com/videoplayback?fexp=9416126%2C9416891%2C9422596%2C9426927%2C9428398%2C9431012%2C9433096%2C9433947&upn=piii03Gs2BQ&ratebypass=yes&source=youtube&expire=1461571313&lmt=1429932035399047&ms=au&mv=m&mt=1461549521&pcm2cms=yes&ip=190.234.106.94&sver=3&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&id=o-ALUqVfdYhADR4G1WYjHFL4lOw4fw8rg0kizLS4Je4RMf&signature=D53FAB5249B77526E28794DC221FFEC954E10D7B.01C5AC6F35BB41846F79E88C3EE3DFBFBC07B338&mime=video%2Fwebm&requiressl=yes&itag=43&dur=0.000&pl=24&initcwndbps=518750&ipbits=0&mn=sn-uqx2-aphl&mm=31&key=yt6" controls>
-			Your browser does not support the <code>video</code> element.
-			</video>
 
 			<div id="left-panel" class="hide_" style="display:none">
 				<br>
