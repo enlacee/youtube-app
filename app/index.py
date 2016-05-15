@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, session
+from flask import Flask, redirect, url_for, session,jsonify
 from flask_oauth import OAuth
 
 
@@ -21,7 +21,7 @@ google = oauth.remote_app('google',
 	base_url='https://www.google.com/accounts/',
 	authorize_url='https://accounts.google.com/o/oauth2/auth',
 	request_token_url=None,
-	request_token_params={'scope': 'https://www.googleapis.com/auth/userinfo.email',
+	request_token_params={'scope': 'https://www.googleapis.com/auth/youtube',
 	                    'response_type': 'code'},
 	access_token_url='https://accounts.google.com/o/oauth2/token',
 	access_token_method='POST',
@@ -31,6 +31,7 @@ google = oauth.remote_app('google',
 
 @app.route('/')
 def index():
+    # return jsonify(session)
     access_token = session.get('access_token')
     if access_token is None:
         return redirect(url_for('login'))
@@ -39,7 +40,7 @@ def index():
     from urllib2 import Request, urlopen, URLError
 
     headers = {'Authorization': 'OAuth '+access_token}
-    req = Request('https://www.googleapis.com/oauth2/v1/userinfo',
+    req = Request('https://www.googleapis.com/auth/youtube',
                   None, headers)
     try:
         res = urlopen(req)
