@@ -29,7 +29,7 @@ google = oauth.remote_app('google',
 	consumer_key=GOOGLE_CLIENT_ID,
 	consumer_secret=GOOGLE_CLIENT_SECRET)
 
-@app.route('/')
+@app.route('/auth')
 def index():
     # return jsonify(session)
     access_token = session.get('access_token')
