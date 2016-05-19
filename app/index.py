@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, session,jsonify
+from flask import Flask, redirect, url_for, session,jsonify, render_template
 from flask_oauth import OAuth
 
 
@@ -28,6 +28,10 @@ google = oauth.remote_app('google',
 	access_token_params={'grant_type': 'authorization_code'},
 	consumer_key=GOOGLE_CLIENT_ID,
 	consumer_secret=GOOGLE_CLIENT_SECRET)
+
+@app.route('/')
+def home():
+	return render_template('index.html')
 
 @app.route('/auth')
 def index():
