@@ -27,16 +27,17 @@ AS.getDatosBasicosYoutube = function(access_token){
 			console.log("URL avatar", me.model.items[0].snippet.thumbnails.high.url);
 			console.log("ID favoritas", me.model.items[0].contentDetails.relatedPlaylists.favorites);
 			var idFavorite = me.model.items[0].contentDetails.relatedPlaylists.favorites;
-
+			var idGoogle = me.model.items[0].contentDetails.googlePlusUserId;
+			var data = JSON.stringify(me.model.items);
 
 			$.ajax({
-			  method: "GET",
-			  url: "/savedata",
-			  data: { idFavorite: idFavorite }
+				method: "POST",
+				url: "/savedata",
+				data: {'idFavorite': idFavorite, 'idGoogle': idGoogle, 'data': data}
 			})
-			  .done(function( msg ) {
-			    alert( "Data Saved: " + msg );
-			  });
+			.done(function(msg){
+				alert( "Data Saved: " + msg );
+			});
 
 		});
 };

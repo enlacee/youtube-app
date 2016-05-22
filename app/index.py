@@ -1,7 +1,8 @@
 from flask import Flask, redirect, url_for, session,jsonify, render_template, request
 from flask_oauth import OAuth
-
 from flask.ext.mysqldb import MySQL
+import json
+import datetime
 
 mysql = MySQL()
 app = Flask(__name__)
@@ -43,19 +44,27 @@ google = oauth.remote_app('google',
 def home():
 	return render_template('index.html')
 
-@app.route('/savedata')
+@app.route('/savedata', methods=['POST'])
 def savedata():
-	idFavorite = request.args.get('idFavorite')
-	cur = mysql.connection.cursor()
-	cur.execute('''SELECT user, host FROM mysql.user''')
-	#
-	query = "INSERT INTO scrap (id_favorite) VALUES ('%s')" % (idFavorite)
-	cur.execute(query)
-	mysql.connection.commit()
-	#
-	rv = cur.fetchall()
-	return str(rv)
+	_rsData = False
+	_idFavorite = request.form['idFavorite']
+	_idGoogle = request.form['idGoogle']
+	_data = request.form['data']
 
+	if _idFavorite and _idGoogle:
+		cur = mysql.connection.cursor()
+		# cur.execute('''SELECT user, host FROM mysql.user''')
+		# _rsData = cur.fetchall()
+		query = """
+			INSERT INTO scrap (id_favorite, id_google, data, date_created)
+			VALUES ('%s', '%s', '%s', '%s')
+			""" % (_idFavorite, _idGoogle, _data, datetime.datetime.now())
+		cur.execute(query)
+		mysql.connection.commit()
+		_rsData = True
+	else:
+		_rsData = 'Ocurrio un errror, no se guardaron los datos'
+	return json.dumps(_rsData)
 
 @app.route('/auth')
 def index():
