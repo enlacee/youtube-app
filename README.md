@@ -63,6 +63,24 @@ part			snippet,contentDetails,statistics,status
 key				'' # key de tu applicacion youtube
 id				'oXGm9Vlfx4w' # id del video de youtube
 https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics,status&key=AIzaSyAYsa0ljjyuQwSX1LQDwQ1WRlXiBVCwOKI&id=oXGm9Vlfx4w
+
+#### GET NAME CATEGORY
+
+https://developers.google.com/youtube/v3/docs/videos/list?hl=es#prubalo
+
+	GET https://www.googleapis.com/youtube/v3/videoCategories?part=id%2Csnippet&id=10&key={YOUR_API_KEY}
+
+##### OBTENER LA CATEGORIA DEL video
+
+	https://www.googleapis.com/youtube/v3/videos?part=snippet&id={comma separated list of video IDs}&key={YOUR_API_KEY}
+
+
+#### consultat al api por favoritos
+
+Ir a la URL api explorer
+
+	https://developers.google.com/apis-explorer/#search/playlistItems/m/youtube/v3/youtube.playlistItems.list?part=id%252Csnippet&maxResults=10&pageToken=true&playlistId=FLvPN2SvwQ6Vqfd1HMHYcceA&fields=items(snippet%252Cstatus)%252CnextPageToken%252CpageInfo%252CprevPageToken%252CtokenPagination&_h=18&
+
 ```
 
 ### test YOUTUBE-DL

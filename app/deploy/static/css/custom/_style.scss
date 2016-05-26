@@ -23,3 +23,14 @@
 .nav-pills > li > a{
 	border-radius: initial;
 }
+// EXTRA CSS ANIBAL
+#spaceScanner ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+#spaceScanner ul li {
+	margin: 10px;
+}
